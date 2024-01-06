@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --background-color: #000;
+  --color: #fff;
+  --buttons-color: #e50914;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--color);
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+}
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./images/header-image.png);
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  padding: 10px 8%;
+  position: relative;
+}
+/* NAVBAR KISMI BAŞLANGIÇ */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.logo {
+  width: 145px;
+  cursor: pointer;
+}
+nav button {
+  border: none;
+  outline: 0;
+  background-color: var(--buttons-color);
+  color: var(--color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.dil {
+  background-color: transparent;
+  border: 1px solid var(--color);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.dil i {
+  font-size: 17px;
+}
+/* NAVBAR BİTİŞ */
+/* HEADER BAŞLANGIÇ */
+
+.icerik {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.icerik h1 {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 80px;
+}
+.icerik p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+.input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  padding: 15px;
+}
+.button {
+  background-color: var(--buttons-color);
+  padding: 15px 30px;
+  border: 0;
+  outline: 0;
+  color: var(--color);
+  cursor: pointer;
+}
+/* header bitiş */
+/* main başlangıç */
+
+main {
+  padding: 50px 10%;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: 10px solid #232323;
+  padding: 30px 5px;
+  flex-wrap: wrap;
+}
+#row-1 {
+  border-top: 10px solid #232323;
+}
+
+.text-col {
+  color: var(--color);
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+.text-col h2 {
+  font-size: 40px;
+}
+.text-col p {
+  margin-top: 10px;
+  line-height: 30px;
+}
+
+.image-col {
+  flex-basis: 50%;
+}
+
+.image-col img {
+  width: 100%;
+}
+.row:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+.sss {
+  padding: 10px 10%;
+}
+.sss h2 {
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+}
+.accordion {
+  margin: 50px auto;
+  width: 100%;
+  max-width: 700px;
+}
+.accordion li {
+  list-style: none;
+  width: 100%;
+  padding: 7px;
+}
+.accordion li label {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #303030;
+  cursor: pointer;
+  position: relative;
+}
+.accordion .content {
+  background-color: #303030;
+  text-align: start;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+input[type="radio"] {
+  display: none;
+}
+label:after {
+  content: "+";
+  font-size: 25px;
+  position: absolute;
+  right: 20px;
+  transition: transform 0.5s;
+}
+input[type="radio"]:checked + label + .content {
+  max-height: 500px;
+}
+input[type="radio"]:checked + label::after {
+  transform: rotate(135deg);
+}
+small {
+  display: block;
+  margin: 50px 0 25px 0;
+}
+/*! footer start */
+
+footer {
+  border-top: 10px solid #232323;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 40px 30%;
+}
+footer h4 {
+  color: #b3b3b3;
+  color: 16px;
+}
+footer h4 span {
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 0 10px;
+}
+footer .footer-kapsayıcı {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+}
+.footer-kapsayıcı li {
+  list-style: none;
+  margin-bottom: 20px;
+}
+.footer-kapsayıcı li a {
+  color: #b3b3b3;
+  font-size: 14px;
+}
+footer button {
+  color: white;
+  padding: 5px 10px;
+  background-color: #b3b3b3 !important;
+}
+
+/*! responsive start */
+@media (max-width: 768px) {
+  .logo {
+    width: 100px;
+  }
+  nav button {
+    padding: 5px 10px;
+  }
+  main .row:nth-child(2n) {
+    flex-direction: column;
+  }
+
+  main .row {
+    flex-direction: column;
+  }
+  footer {
+    padding: 40px 15%;
+  }
+
+  .footer-kapsayıcı {
+    flex-direction: column;
+    gap: 30px !important;
+  }
+  .footer-kapsayıcı ul {
+    border-bottom: 3px solid red;
+  }
+}
